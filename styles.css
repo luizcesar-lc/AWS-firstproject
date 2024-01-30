@@ -54,13 +54,20 @@ html, body {
   
 .card {
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
   
 .image {
   border-radius: 10px 10px 0px 0px;
   background: linear-gradient(0deg, rgba(176, 176, 176, 0.20) 0%, rgba(176, 176, 176, 0.20) 100%);
   padding: 20px;
-  
+  min-height: 115px;
+}
+
+.image img {
+  width: 260px;
+  height: 85px;
+  object-fit: contain;
 }
   
 .content {
@@ -79,7 +86,8 @@ html, body {
   
 .content .icon img {
   width: 32px;
-  height: 32px;
+  height: 32px;  
+  border-radius: 50%;
 }
   
 .content .icon .name {
@@ -112,7 +120,7 @@ html, body {
 }
 
 .modal{
-  display: block;
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -131,7 +139,7 @@ html, body {
   gap: 32px;
   border-radius: 10px;
   background: #FFF;
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 14px 18px rgba(0, 0, 0, 0.05);
   margin: 32px;
   width: 100%;
   max-width: 488px;
@@ -144,20 +152,13 @@ html, body {
 
 .modal-content .icon-text {
   display: flex;
-  font-family: Inter;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  letter-spacing: 0em;
-  text-align: left;
-
+  gap: 16px;
 }
 
 .modal-content .icon-text .check-icon {
   border-radius: 4px;
-  justify-content: center;
+  background: var(--Primary-Blue-50, #F3F5FC);
   height: fit-content;
-  margin: 10px; 
 }
 
 .button{
@@ -168,16 +169,20 @@ html, body {
   flex: 1 0 0;
   border-radius: 6px;
   background: #32343A;
+  cursor: pointer;
 }
 
 .button a span {
   color: #FFF;
-  font-size: 16px;   
+  font-size: 16px; 
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;  
 }
 
 .modal-content .close{
   cursor: pointer;
   position: absolute;
   top: 0;
-  left: 90%;
+  right: 0;
 }
